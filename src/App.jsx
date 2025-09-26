@@ -14,7 +14,7 @@ function handleChange(inputIdentifier,newValue){
   setUserInput((prevInput)=>{
       return{
           ...prevInput,
-          [inputIdentifier]:+newValue
+          [inputIdentifier]:newValue === "" ? "" : +newValue
       }
   })
 }
